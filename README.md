@@ -4,7 +4,7 @@
 - #### Microservices
 
 ### Branching strategy
-- #### multi repositories
+- #### Multi repositories
 
 ### Coding convention
 - #### Clean architecture
