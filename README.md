@@ -13,9 +13,11 @@
 
 ```
 project/
-├── cmd/
-│   ├── order_service/
-│   │   └── main.go                # Entry point for the Order Service
+├── cmd/                           # Entry point for each Service
+│   ├── order/
+│   │   └── main.go
+│   ├── payment/
+│   │   └── main.go
 ├── internal/
 │   ├── repository/                # General repository functions; Example: Exec() for database query mechanisms
 │   ├── delivery/                  # General delivery functions; Example: Consume() for message consumption mechanisms
@@ -38,14 +40,14 @@ project/
 │   ├── order/
 │   │   ├── internal/
 │   │   │   ├── delivery/          # Service-specific delivery functions; Example http, rpc, event message
-│   │   │   ├── usecase/           # Business logic for order management
-│   │   │   ├── repository/        # Data access layer for order management
-│   │   │   └── domain/            # Domain logic and models for order management
-│   │   │       ├── order.go       # Domain model for orders
-│   │   │       └── mock/          # Mock data or interfaces for testing
+│   │   │   ├── usecase/           # Business logic
+│   │   │   ├── repository/        # Data access layer
+│   │   │   └── domain/            # Domain logic and models
+│   │   │       ├── order.go       # Domain model
+│   │   │       └── mock/          # Mock data
 │   │   └── api/
 │   │       └── proto/
-│   │           └── order.proto    # Protocol Buffers file for order service
+│   │           └── order.proto    # Protocol Buffers file
 │   └── payment/
 │       ├── internal/
 │       │   ├── delivery/
