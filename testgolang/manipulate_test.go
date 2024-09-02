@@ -1,7 +1,6 @@
 package testgolang_test
 
 import (
-	"fmt"
 	"neversitup-assignment/testgolang"
 	"testing"
 )
@@ -77,7 +76,6 @@ func Test_Shuffle(t *testing.T) {
 	for i := range testCases {
 		tc := testCases[i]
 		result := testgolang.Shuffle(tc.input)
-		fmt.Println(result)
 		if len(result) != len(tc.expected) {
 			t.Errorf(
 				"%s length error: expected %d but got %d",

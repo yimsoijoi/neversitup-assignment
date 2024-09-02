@@ -1,9 +1,5 @@
 package testgolang
 
-import (
-	"fmt"
-)
-
 func Shuffle(str string) []string {
 	results := []string{}
 	perms := genPermutations(str)
@@ -19,7 +15,6 @@ func Shuffle(str string) []string {
 }
 
 func genPermutations(str string) []string {
-	fmt.Println(str)
 	if len(str) == 0 {
 		return []string{}
 	}
