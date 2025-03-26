@@ -12,7 +12,7 @@ func Test_Shuffle(t *testing.T) {
 		expected []string
 	}{
 		{
-			name:     "nil input",
+			name:     "empty input",
 			input:    "",
 			expected: []string{},
 		},

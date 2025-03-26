@@ -1,21 +1,11 @@
 package testgolang
 
 func Shuffle(str string) []string {
-	results := []string{}
-	perms := genPermutations(str)
-	seen := map[string]struct{}{}
-	for i := range perms {
-		if _, ok := seen[perms[i]]; !ok {
-			results = append(results, perms[i])
-			seen[perms[i]] = struct{}{}
-		}
-	}
-
-	return results
+	return genPermutations(str)
 }
 
 func genPermutations(str string) []string {
-	if len(str) == 0 {
+	if str == "" {
 		return []string{}
 	}
 	if len(str) == 1 {
